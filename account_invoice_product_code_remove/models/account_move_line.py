@@ -7,8 +7,8 @@ from odoo import models
 class AccountMoveLine(models.Model):
     _inherit = "account.move.line"
 
-    def _get_computed_name(self):
-        name = super()._get_computed_name()
+    def _compute_name(self):
+        res = super()._compute_name()
         if self.product_id.default_code:
-            name = name.replace(f"[{self.product_id.default_code}] ", "").strip()
-        return name
+            self.name = self.name.replace(f"[{self.product_id.default_code}] ", "").strip()
+        return res
