@@ -6,7 +6,7 @@
     "author": "Jarsa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/account-invoicing",
     "category": "Accounting & Finance",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "LGPL-3",
     "depends": ["account"],
 }
