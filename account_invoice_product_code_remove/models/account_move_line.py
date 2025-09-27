@@ -9,6 +9,9 @@ class AccountMoveLine(models.Model):
 
     def _compute_name(self):
         res = super()._compute_name()
-        if self.product_id.default_code:
-            self.name = self.name.replace(f"[{self.product_id.default_code}] ", "").strip()
+        for rec in self:
+            if rec.product_id.default_code:
+                rec.name = rec.name.replace(
+                    f"[{rec.product_id.default_code}] ", ""
+                ).strip()
         return res
