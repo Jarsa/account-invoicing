@@ -32,8 +32,9 @@ Account Invoice Product Code Remove
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Removes default code brackets from the beginning of invoice line
-description.
+Removes the product internal reference (default code) in brackets from
+the label of invoice lines, so customer invoices, vendor bills, credit
+notes and their PDF report only show the product name.
 
 **Table of contents**
 
@@ -43,8 +44,9 @@ description.
 Usage
 =====
 
-Add a product in the invoice line, then the description of the product
-will be displayed without the default code.
+Add a product with an internal reference to a line of a customer invoice
+or a vendor bill. The label of the line will show the product name
+without the internal reference, also in the PDF report.
 
 Bug Tracker
 ===========
@@ -68,6 +70,7 @@ Contributors
 ------------
 
 - Alan Ramos <alan.ramos@jarsa.com>
+- Hector Meraz <hector.meraz@jarsa.com>
 
 Maintainers
 -----------
